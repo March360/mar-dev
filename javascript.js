@@ -149,7 +149,7 @@ ScrollReveal({
   delay: 400
   });
   
-  ScrollReveal().reveal('.title', { delay: 500, origin: 'bottom',mobile: false});
+  ScrollReveal().reveal('.title', { delay: 500, origin: 'bottom'},{mobile: false});
   ScrollReveal().reveal('.about .about-image', { delay: 500, rotate:{x:40 ,z:40} });
   ScrollReveal().reveal('.textdiv', { delay: 500, origin: 'bottom'});
   ScrollReveal().reveal('.services .column', { delay: 500, origin: 'bottom' });
