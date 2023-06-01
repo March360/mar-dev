@@ -144,9 +144,9 @@ $(document).ready(function(){
 });
 
 ScrollReveal({
-  // distance: '60px',
-  // duration: '2500',
-  // delay: 400
+  distance: '60px',
+  duration: '2500',
+  delay: 400
   });
   
   ScrollReveal().reveal('.title', { delay: 500, origin: 'bottom'});
@@ -154,10 +154,10 @@ ScrollReveal({
   ScrollReveal().reveal('.textdiv', { delay: 500, origin: 'bottom'});
   ScrollReveal().reveal('.services .column', { delay: 500, origin: 'bottom' });
   ScrollReveal().reveal('.card-reveal-1', { delay: 500, origin: 'bottom' });
-  ScrollReveal().reveal('.revealDiv', { delay: 500, origin: 'left'});
-  ScrollReveal().reveal('.skills-desc', { delay: 500, origin: 'left' });
+  // ScrollReveal().reveal('.revealDiv', { delay: 500, origin: 'left'});
+  // ScrollReveal().reveal('.skills-desc', { delay: 500, origin: 'left' });
   ScrollReveal().reveal('.skills-Info', { delay: 500, origin: 'bottom' });
-  ScrollReveal().reveal('.contact-desc', { delay: 500, origin: 'left' });
+  // ScrollReveal().reveal('.contact-desc', { delay: 500, origin: 'left' });
   // ScrollReveal().reveal('.icons', { delay: 500, origin: 'bottom' });
   ScrollReveal().reveal('.message', { delay: 500, origin: 'bottom' });
 
