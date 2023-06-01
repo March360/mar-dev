@@ -622,7 +622,7 @@ section .title{
   
 /* contact section styling */
 .contact{
-    background-color: #fff;
+    background-color: #000;
     color: #fff;
 }
 .contact .contact-content .column{
