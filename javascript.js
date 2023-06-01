@@ -149,7 +149,7 @@ ScrollReveal({
   delay: 400
   });
   
-  ScrollReveal().reveal('.title', { delay: 500, origin: 'bottom'},{mobile: false});
+  ScrollReveal().reveal('.title', { delay: 500, origin: 'bottom'});
   ScrollReveal().reveal('.about .about-image', { delay: 500, rotate:{x:40 ,z:40} });
   ScrollReveal().reveal('.textdiv', { delay: 500, origin: 'bottom'});
   ScrollReveal().reveal('.services .column', { delay: 500, origin: 'bottom' });
@@ -160,6 +160,19 @@ ScrollReveal({
   ScrollReveal().reveal('.contact-desc', { delay: 500, origin: 'left' });
   ScrollReveal().reveal('.icons', { delay: 500, origin: 'bottom' });
   ScrollReveal().reveal('.message', { delay: 500, origin: 'bottom' });
+
+    
+    ScrollReveal().reveal('.title', { delay: 500, origin: 'bottom'},{mobile: false});
+    ScrollReveal().reveal('.about .about-image', { delay: 500, rotate:{x:40 ,z:40} },{mobile: false});
+    ScrollReveal().reveal('.textdiv', { delay: 500, origin: 'bottom'},{mobile: false});
+    ScrollReveal().reveal('.services .column', { delay: 500, origin: 'bottom' },{mobile: false});
+    ScrollReveal().reveal('.card-reveal-1', { delay: 500, origin: 'bottom' },{mobile: false});
+    ScrollReveal().reveal('.revealDiv', { delay: 500, origin: 'left'},{mobile: false});
+    ScrollReveal().reveal('.skills-desc', { delay: 500, origin: 'left' },{mobile: false});
+    ScrollReveal().reveal('.skills-Info', { delay: 500, origin: 'bottom' },{mobile: false});
+    ScrollReveal().reveal('.contact-desc', { delay: 500, origin: 'left' },{mobile: false});
+    ScrollReveal().reveal('.icons', { delay: 500, origin: 'bottom' },{mobile: false});
+    ScrollReveal().reveal('.message', { delay: 500, origin: 'bottom' },{mobile: false});
 
   jQuery(document).ready(function(){
   
