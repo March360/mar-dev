@@ -25,6 +25,11 @@ html{
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+/* .sr .title{
+  visibility: hidden;
+} */
+
+
 
 /* all similar content styling codes */
 section{

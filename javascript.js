@@ -143,31 +143,25 @@ $(document).ready(function(){
    
 });
 
-(function ScrollReveal(){
-  window.sr = ScrollReveal({});
-  sr.reveal('.title', { delay: 500, origin: 'bottom',distance: '60px',
-  duration: '2500'});
-})
-
-
-
-ScrollReveal({
-  distance: '20px',
+window.sr = ScrollReveal({
+  distance: '60px',
   duration: '2500',
   delay: 400
   });
+  
+  sr.reveal('.title', { delay: 500, origin: 'bottom'});
+  sr.reveal('.about .about-image', { delay: 500, rotate:{x:40 ,z:40} });
+  sr.reveal('.textdiv', { delay: 500, origin: 'bottom'});
+  sr.reveal('.services .column', { delay: 500, origin: 'bottom' });
+  sr.reveal('.card-reveal-1', { delay: 500, origin: 'bottom' });
+  sr.reveal('.revealDiv', { delay: 500, origin: 'left'});
+  sr.reveal('.skills-desc', { delay: 500, origin: 'left' });
+  sr.reveal('.skills-Info', { delay: 500, origin: 'bottom' });
+  sr.reveal('.contact-desc', { delay: 500, origin: 'left' });
+  sr.reveal('.icons', { delay: 500, origin: 'bottom' });
+  sr.reveal('.message', { delay: 500, origin: 'bottom' });
+
     
-    ScrollReveal().reveal('.title', { delay: 500, origin: 'bottom'},{mobile: false});
-    ScrollReveal().reveal('.about .about-image', { delay: 500, rotate:{x:40 ,z:40} },{mobile: false});
-    ScrollReveal().reveal('.textdiv', { delay: 500, origin: 'bottom'},{mobile: false});
-    ScrollReveal().reveal('.services .column', { delay: 500, origin: 'bottom' },{mobile: false});
-    ScrollReveal().reveal('.card-reveal-1', { delay: 500, origin: 'bottom' },{mobile: false});
-    ScrollReveal().reveal('.revealDiv', { delay: 500, origin: 'left'},{mobile: false});
-    ScrollReveal().reveal('.skills-desc', { delay: 500, origin: 'left' },{mobile: false});
-    ScrollReveal().reveal('.skills-Info', { delay: 500, origin: 'bottom' },{mobile: false});
-    ScrollReveal().reveal('.contact-desc', { delay: 500, origin: 'left' },{mobile: false});
-    ScrollReveal().reveal('.icons', { delay: 500, origin: 'bottom' },{mobile: false});
-    ScrollReveal().reveal('.message', { delay: 500, origin: 'bottom' },{mobile: false});
 
   jQuery(document).ready(function(){
   
