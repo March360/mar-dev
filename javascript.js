@@ -143,12 +143,14 @@ $(document).ready(function(){
    
 });
 
-window.sr = ScrollReveal({
-  distance: '60px',
-  duration: '2500',
-  delay: 400
-  },
-  sr.reveal('.title', { delay: 500, origin: 'bottom'}));
+window.sr = ScrollReveal(
+  // distance: '60px',
+  // duration: '2500',
+  // delay: 400
+
+  sr.reveal('.title', { delay: 500, origin: 'bottom'})
+  
+ );
   
   // sr.reveal('.title', { delay: 500, origin: 'bottom'});
   // sr.reveal('.about .about-image', { delay: 500, rotate:{x:40 ,z:40} });
