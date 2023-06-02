@@ -160,6 +160,8 @@ ScrollReveal({
   ScrollReveal().reveal('.contact-desc', { delay: 500, origin: 'left' });
   ScrollReveal().reveal('.icons', { delay: 500, origin: 'bottom' });
   ScrollReveal().reveal('.message', { delay: 500, origin: 'bottom' });
+  ScrollReveal().reveal('.webDesign', { delay: 500, origin: 'left' });
+  ScrollReveal().reveal('.responsiveDesign', { delay: 500, origin: 'right' });
 
   jQuery(document).ready(function(){
   
