@@ -109,7 +109,7 @@ $(document).ready(function (){
 $(document).ready(function(){
     $(window).scroll(function(){
         // sticky navbar on scroll script
-        if(this.scrollY > 60){
+        if(this.scrollY > 10){
             $('.navbar').addClass("sticky");
         }else{
             $('.navbar').removeClass("sticky");
