@@ -1064,5 +1064,7 @@ footer span a:hover{
     }.services .services-content .card p,
     .services .services-content .card p{
         font-size: 17px;
+    }.scroll-up-btn{
+        bottom: 60px !important;
     }
 }
