@@ -333,7 +333,7 @@ section .title{
 }
 
 /* porfolio section styling */
-.project, .teams{
+.project{
     color:#fff;
     background: #111;
 }
@@ -346,49 +346,55 @@ section .title{
     background: #111;
     
 }
+.project .serv-content{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+grid-gap: 20px;
+}
 .project .serv-content .card{
-    width: calc(33% - 20px);
-    background: #222;
-    text-align: center;
-    border-radius: 6px;
-    padding: 15px 15px 0;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-bottom: 32px;
-    border: 2px solid #222;
-    height: 400px;
+    border: 2px solid #111;
+    overflow: hidden;
+    background-color: #333;
+    display: none;
+}
+.project .serv-content .card .box{
+    overflow: hidden;
+    height: 350px;
+    padding: 15px;
+  
+}
+.project .serv-content .card .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.project .serv-content .card:nth-child(1),
+.project .serv-content .card:nth-child(2),
+.project .serv-content .card:nth-child(3){
+    display: inline-block;
 }
 .project .serv-content .card:hover{
     background: #333;
     color: gold;
     border: 2px solid gold;
-    transition: all 0.3s ease;
-}
-.project .serv-content .card .box{
-    transition: all 0.3s ease;
-   
-}
-.project .serv-content .card:hover .box{
-    transform: scale(1.05);
 }
 
-.project .serv-content .card .box{
-    height: auto;
-    overflow: hidden;
+.project .serv-content .card .box:hover img{
+    transform: scale(1.1);
 }
-.project .service-image{
-    max-width: 100%;
-    height: 320px;
 
-    /* margin-bottom: -8px; */
-   
-}
-.project .car .box,.desc{
-    /* margin-top: 20px; */
-    padding: 7px 0px;
-    margin: 5px;
+.project .desc{
     font-size: 1.2rem;
     font-weight: 500;
+    background-color: #0b4f53;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
 }
 
 .project .btn-show{
@@ -409,9 +415,7 @@ section .title{
     color: maroon;
     border: 2px solid #fff;
 }
-.card-div{
-    display: none;
-}
+
  .project a{
     color: #fff;
     
@@ -816,10 +820,6 @@ footer span a:hover{
 @media (max-width: 1024px){
     .desc{
         font-size: 17px;
-    }.project .service-image{
-        height: 300px;
-    }.project .serv-content .card{
-        height: 380px;
     }.hover-button:before{
         padding: 0 5px;
         width: 210px;
@@ -891,10 +891,7 @@ footer span a:hover{
     .about .about-content .rightSide{
         flex: 100%;
     }
-    .project .serv-content .card{
-        width: calc(50% - 10px);
-        margin-bottom: 20px;
-    }
+
     .skills .skills-content .column,
     .contact .contact-content .column{
         width: 100%;
@@ -921,28 +918,7 @@ footer span a:hover{
     .home .home-content .text-3{
         font-size: 32px;
     }
-    .project .serv-content .card{
-        width: 100%;
-        padding: 8px 8px 0;
-       
-        height: auto;
-    }.project .service-image{
-        height: auto;
-        object-fit: cover;
-    }.project .serv-content .card:hover .box{
-        transform: scale(1.01);
-    }.services .services-content .card{
-        width: 100%;
-    } .project .serv-content .card{
-        height: 360px;
-    }.project .service-image{
-        height: 290px;
-        width: 100%;
-    }.project .service-image{
-        height: 377px;
-    }.project .serv-content .card{
-        height: 450px;
-    }.desc{
+    .desc{
         font-size: 20px;
     }.about .about-content .rightSide a{
         padding: 12px 25px !important;
@@ -993,10 +969,6 @@ footer span a:hover{
         max-width: 100%;
     }.services .services-content .card{
         width: 100%;
-    }.project .service-image{
-        height: 350px;
-    }.project .serv-content .card{
-        height: 420px;
     }
     .desc{
         font-size: 18px;
@@ -1004,6 +976,13 @@ footer span a:hover{
         padding: 12px 18px !important;
         font-size: 18px;
         color: #fff;
+    }
+}
+@media(max-width: 450px){
+    .project .serv-content{
+        grid-template-columns: 1fr;
+    }.project .serv-content .card .box{
+        height: 200px;
     }
 }
 @media(max-width: 375px){
@@ -1029,21 +1008,6 @@ footer span a:hover{
     }.about .about-content .rightSide a{
         font-size: 15px;
         padding: 10px 15px;
-    }.project .car .box,.desc{
-        padding: 12px 8px;
-        font-size: 15px;
-        font-weight: 500;
-        /* background-color: maroon; */
-    }.project .serv-content .card{
-        padding: 5px 5px 0;
-        max-width: 100%;
-        height: auto;
-    }.project .serv-content .card:hover .box{
-        transform: scale(1.03);
-    }.project .service-image{
-        height: 238px;
-    }.project .serv-content .card{
-        height: 305px;
     }.desc{
         padding: 8px 0px;
     }.hover-button{

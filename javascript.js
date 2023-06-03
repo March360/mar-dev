@@ -146,7 +146,8 @@ $(document).ready(function(){
 // ScrollReveal({
 //   distance: '60px',
 //   duration: '2500',
-//   delay: 400
+//   delay: 400,
+//   reset: true
 //   });
   
 //   ScrollReveal().reveal('.title', { delay: 500, origin: 'bottom'});
@@ -182,28 +183,42 @@ $(document).ready(function(){
     });
   });
 
-      function fillscrollline(){
-        const windowHeight = window.innerHeight;
-        const fullHeight = document.body.clientHeight;
-        const scrolled = window.scrollY;
-        const percentScrolled = (scrolled / (fullHeight - windowHeight)) * 100;
+      // function fillscrollline(){
+      //   const windowHeight = window.innerHeight;
+      //   const fullHeight = document.body.clientHeight;
+      //   const scrolled = window.scrollY;
+      //   const percentScrolled = (scrolled / (fullHeight - windowHeight)) * 100;
 
-        scrollline.style.width = percentScrolled + '%';
-      };
-      window.addEventListener('scroll', fillscrollline);
-      // show the 3 images
-       $(".card-div:lt(3)").show();
+      //   scrollline.style.width = percentScrolled + '%';
+      // };
+      // window.addEventListener('scroll', fillscrollline);
+      // // show the 3 images
+      //  $(".card-div:lt(3)").show();
 
-      // When the gallery button is clicked
-      $("#gallery-btn").on('click', function(event){
-        // prevent default behavior
-        event.preventDefault();
-        // All of the hidden images
-        var $hidden = $(".card-div:hidden");
-        //show the next three images
-        $($hidden).slice(0, 3).fadeIn(800);;
-         // If the length of $hidden is 4 then hide the button
-        if ($hidden.length == 3){
-          $(this).fadeOut();
+      // // When the gallery button is clicked
+      // $("#gallery-btn").on('click', function(event){
+      //   // prevent default behavior
+      //   event.preventDefault();
+      //   // All of the hidden images
+      //   var $hidden = $(".card-div:hidden");
+      //   //show the next three images
+      //   $($hidden).slice(0, 3).fadeIn(800);;
+      //    // If the length of $hidden is 4 then hide the button
+      //   if ($hidden.length == 3){
+      //     $(this).fadeOut();
+      //   }
+      // });
+
+      let galleryBtn = document.querySelector('#gallery-btn');
+      let currentItem = 3;
+
+      galleryBtn.onclick = () =>{
+        let boxes = [...document.querySelectorAll('.project .serv-content .card')];
+        for (var i = currentItem; i < currentItem + 3; i++){
+           boxes[i].style.display = 'inline-block';
         }
-      });
+        currentItem += 3;
+        if(currentItem >= boxes.length){
+          galleryBtn.style.display = 'none';
+        }
+      }
