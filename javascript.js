@@ -143,25 +143,25 @@ $(document).ready(function(){
    
 });
 
-ScrollReveal({
-  distance: '60px',
-  duration: '2500',
-  delay: 400
-  });
+// ScrollReveal({
+//   distance: '60px',
+//   duration: '2500',
+//   delay: 400
+//   });
   
-  ScrollReveal().reveal('.title', { delay: 500, origin: 'bottom'});
-  ScrollReveal().reveal('.about .about-image', { delay: 500, rotate:{x:40 ,z:40} });
-  ScrollReveal().reveal('.textdiv', { delay: 500, origin: 'bottom'});
-  ScrollReveal().reveal('.services .column', { delay: 500, origin: 'bottom' });
-  ScrollReveal().reveal('.card-reveal-1', { delay: 500, origin: 'bottom' });
-  ScrollReveal().reveal('.revealDiv', { delay: 500, origin: 'left'});
-  ScrollReveal().reveal('.skills-desc', { delay: 500, origin: 'left' });
-  ScrollReveal().reveal('.skills-Info', { delay: 500, origin: 'bottom' });
-  ScrollReveal().reveal('.contact-desc', { delay: 500, origin: 'left' });
-  ScrollReveal().reveal('.icons', { delay: 500, origin: 'bottom' });
-  ScrollReveal().reveal('.message', { delay: 500, origin: 'bottom' });
-  ScrollReveal().reveal('.responsive', { delay: 500, origin: 'right' });
-  ScrollReveal().reveal('.webDesign', { delay: 500, origin: 'left' });
+//   ScrollReveal().reveal('.title', { delay: 500, origin: 'bottom'});
+//   ScrollReveal().reveal('.about .about-image', { delay: 500, rotate:{x:40 ,z:40} });
+//   ScrollReveal().reveal('.textdiv', { delay: 500, origin: 'bottom'});
+//   ScrollReveal().reveal('.services .column', { delay: 500, origin: 'bottom' });
+//   ScrollReveal().reveal('.card-reveal-1', { delay: 500, origin: 'bottom' });
+//   ScrollReveal().reveal('.revealDiv', { delay: 500, origin: 'left'});
+//   ScrollReveal().reveal('.skills-desc', { delay: 500, origin: 'left' });
+//   ScrollReveal().reveal('.skills-Info', { delay: 500, origin: 'bottom' });
+//   ScrollReveal().reveal('.contact-desc', { delay: 500, origin: 'left' });
+//   ScrollReveal().reveal('.icons', { delay: 500, origin: 'bottom' });
+//   ScrollReveal().reveal('.message', { delay: 500, origin: 'bottom' });
+//   ScrollReveal().reveal('.responsive', { delay: 500, origin: 'right' });
+//   ScrollReveal().reveal('.webDesign', { delay: 500, origin: 'left' });
 
   jQuery(document).ready(function(){
   
