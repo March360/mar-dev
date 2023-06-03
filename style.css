@@ -924,6 +924,11 @@ footer span a:hover{
         padding: 12px 25px !important;
         font-size: 18px;
         color: #fff;
+    } .project .serv-content{
+        grid-template-columns: 1fr;
+    }.project .serv-content .card .box{
+        height: 200px;
+        width: 100px;
     }
 }
 
@@ -983,6 +988,7 @@ footer span a:hover{
         grid-template-columns: 1fr;
     }.project .serv-content .card .box{
         height: 200px;
+        width: 100px;
     }
 }
 @media(max-width: 375px){
