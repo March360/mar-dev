@@ -41,7 +41,7 @@ section{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
-.project .serv-content,.services .services-content,
+.project .pro-container,.services .services-content,
 .skills .skills-content,
 .contact .contact-content{
     display: flex;
@@ -346,45 +346,39 @@ section .title{
     background: #111;
     
 }
-.project .serv-content{
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-grid-gap: 20px;
-}
-.project .serv-content .card{
-    border-radius: 10px;
+.project .pro-container .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    /* padding: 15px 15px 0; */
     cursor: pointer;
     transition: all 0.3s ease;
-    border: 2px solid #111;
+    margin-bottom: 32px;
+    border: 2px solid #222;
+    /* height: 400px; */
     overflow: hidden;
-    background-color: #333;
-    display: none;
 }
-.project .serv-content .card .box{
+.project .pro-container .card .box{
     overflow: hidden;
     height: 350px;
     padding: 15px;
   
 }
-.project .serv-content .card .box img{
+.project .pro-container .card .box img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     transition: all 0.3s ease-in-out;
 }
-
-.project .serv-content .card:nth-child(1),
-.project .serv-content .card:nth-child(2),
-.project .serv-content .card:nth-child(3){
-    display: inline-block;
-}
-.project .serv-content .card:hover{
+.project .pro-container .card:hover{
     background: #333;
     color: gold;
     border: 2px solid gold;
+    transition: all 0.3s ease;
 }
 
-.project .serv-content .card .box:hover img{
+.project .pro-container .card .box:hover img{
     transform: scale(1.1);
 }
 
@@ -422,6 +416,9 @@ grid-gap: 20px;
  }.project a:hover{
     color: gold;
     
+ }
+ .card-div{
+    display: none;
  }
 
 /* skills section styling */
@@ -818,7 +815,7 @@ footer span a:hover{
     }
 }
 @media (max-width: 1024px){
-    .desc{
+    .project .desc{
         font-size: 17px;
     }.hover-button:before{
         padding: 0 5px;
@@ -830,6 +827,8 @@ footer span a:hover{
         padding: 12px 23px;
         font-size: 18px;
         color: #fff;
+    }.project .pro-container .card .box{
+        height: 300px;
     }
 }
 
@@ -896,6 +895,11 @@ footer span a:hover{
     .contact .contact-content .column{
         width: 100%;
         margin-bottom: 35px;
+    }.project .pro-container .card .box{
+        height: 290px;
+    }.project .pro-container .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
     }
 }
 @media (max-width: 768px){
@@ -918,17 +922,18 @@ footer span a:hover{
     .home .home-content .text-3{
         font-size: 32px;
     }
-    .desc{
+    .project .desc{
         font-size: 20px;
     }.about .about-content .rightSide a{
         padding: 12px 25px !important;
         font-size: 18px;
         color: #fff;
-    } .project .serv-content{
-        grid-template-columns: 1fr;
-    }.project .serv-content .card .box{
-        height: 200px;
-        width: 100px;
+    }.project .pro-container .card .box{
+        height: 330px;
+    }
+    
+    .project .pro-container .card{
+        width: 100%;
     }
 }
 
@@ -975,20 +980,12 @@ footer span a:hover{
     }.services .services-content .card{
         width: 100%;
     }
-    .desc{
+    .project .desc{
         font-size: 18px;
     }.about .about-content .rightSide a{
         padding: 12px 18px !important;
         font-size: 18px;
         color: #fff;
-    }
-}
-@media(max-width: 450px){
-    .project .serv-content{
-        grid-template-columns: 1fr;
-    }.project .serv-content .card .box{
-        height: 200px;
-        width: 100px;
     }
 }
 @media(max-width: 375px){
@@ -1007,6 +1004,11 @@ footer span a:hover{
     .skills .title,.services .title,
     .contact .title{
         font-size: 30px
+    }.project .pro-container .card .box{
+        height: 200px;
+    }.project .desc{
+        height: 50px;
+        line-height: 50px;
     }
     .project .btn-show{
         padding: 10px 9px;
@@ -1014,8 +1016,6 @@ footer span a:hover{
     }.about .about-content .rightSide a{
         font-size: 15px;
         padding: 10px 15px;
-    }.desc{
-        padding: 8px 0px;
     }.hover-button{
         font-size: 14px;
         width: 160px;
