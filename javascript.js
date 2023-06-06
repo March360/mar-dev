@@ -151,7 +151,7 @@ ScrollReveal({
   
   ScrollReveal().reveal('.title', { delay: 500, origin: 'bottom'});
   ScrollReveal().reveal('.about .about-image', { delay: 500, rotate:{x:40 ,z:40} });
-  ScrollReveal().reveal('.textdiv', { delay: 500, origin: 'left'});
+  ScrollReveal().reveal('.textdiv', { delay: 500, origin: 'right'});
   ScrollReveal().reveal('.services .column', { delay: 500, origin: 'bottom' });
   ScrollReveal().reveal('.card-reveal-1', { delay: 500, origin: 'bottom' });
   ScrollReveal().reveal('.revealDiv', { delay: 500, origin: 'left'});
