@@ -146,8 +146,7 @@ $(document).ready(function(){
 ScrollReveal({
   distance: '60px',
   duration: '2500',
-  delay: 400,
-  reset: true
+  delay: 400
   });
   
   ScrollReveal().reveal('.title', { delay: 500, origin: 'bottom'});
