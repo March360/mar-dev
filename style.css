@@ -74,7 +74,7 @@ section .title{
     position: fixed;
     width: 100%;
     z-index: 999;
-    padding: 30px 0;
+    padding: 15px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
 }
@@ -891,10 +891,13 @@ footer span a:hover{
         flex: 100%;
     }
 
-    .skills .skills-content .column,
-    .contact .contact-content .column{
+    .skills .skills-content .column{
         width: 100%;
         margin-bottom: 35px;
+    }
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 0px;
     }.project .pro-container .card .box{
         height: 290px;
     }.project .pro-container .card{
@@ -1000,11 +1003,26 @@ footer span a:hover{
     }
 }
 @media(max-width: 280px){
+    .navbar{
+        padding: 10px 0;
+        overflow: hidden;
+    }
+    
+    .navbar .logo a{
+        font-size: 28px;
+    }
     .project .title,.about .title,
     .skills .title,.services .title,
     .contact .title{
-        font-size: 30px
-    }.project .pro-container .card .box{
+        font-size: 28px
+    }.home .home-content .text-1{
+        font-size: 27px;
+    }.home .home-content .text-2{
+        font-size: 41px;
+    }.home .home-content .text-3{
+        font-size: 27px;
+    }
+    .project .pro-container .card .box{
         height: 200px;
     }.project .desc{
         height: 50px;
@@ -1037,5 +1055,7 @@ footer span a:hover{
         font-size: 17px;
     }.scroll-up-btn{
         bottom: 60px !important;
+    }.contact .contact-content .info .sub-title{
+        font-size: 14px;
     }
 }
