@@ -242,7 +242,6 @@ section .title{
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
     color: var(--text-color);
-    overflow: hidden;
     cursor: pointer;  
  }
  .hover-button:hover {
