@@ -451,6 +451,10 @@ section .title{
     overflow: hidden;
    
   }
+  .progress-bar h4{
+    /* background-color: cadetblue; */
+    height: 28px;
+  }
   
   .progress-title-holder {
     padding-bottom: 7px;
