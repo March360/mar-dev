@@ -37,11 +37,11 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .project, .skills, .teams, .contact, footer{
+.about, .project,.certificate, .skills, .teams, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
-.project .pro-container,.services .services-content,
+.project .pro-container,.certificate .cerContainer,.services .services-content,
 .skills .skills-content,
 .contact .contact-content{
     display: flex;
@@ -419,6 +419,53 @@ section .title{
  .card-div{
     display: none;
  }
+ /* Certificate Section Start */
+.certificate{
+    color: #000;
+    background: silver;
+}
+.certificate .cerContainer .card{
+    width: calc(50% - 20px);
+    /* background: #fff; */
+    text-align: center;
+    /* border-radius: 6px; */
+    /* padding: 15px 15px 0; */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 32px;
+    /* border: 2px solid #222; */
+    /* height: 400px; */
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 3px solid rgba(255, 255, 255, 0.29);
+}
+.certificate .cerContainer .card .box{
+    overflow: hidden;
+    height: 360px;
+    padding: 15px;
+}
+.certificate .cerContainer .card .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+.certificate .cerContainer .card .box:hover img{
+    transform: scale(1.1);
+}
+.certificate .cerContainer .card:hover{
+ color: gold;
+ border: 3px solid gold;
+ transition: all 0.3s ease;
+}
+.certificate a:hover{
+    color: gold;
+}
+/* Certificate Section End */
 
 /* skills section styling */
 .skills{
@@ -906,6 +953,10 @@ footer span a:hover{
     }.project .pro-container .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
+    }.certificate .cerContainer .card{
+        width: calc(50% - 10px);
+    } .certificate .cerContainer .card .box{
+        height: 290px;
     }
 }
 @media (max-width: 768px){
@@ -938,7 +989,7 @@ footer span a:hover{
         height: 330px;
     }
     
-    .project .pro-container .card{
+    .project .pro-container .card,.certificate .cerContainer .card{
         width: 100%;
     }
 }

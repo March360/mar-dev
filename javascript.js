@@ -155,6 +155,7 @@ ScrollReveal({
   ScrollReveal().reveal('.services .column', { delay: 500, origin: 'bottom' });
   ScrollReveal().reveal('.card-reveal-1', { delay: 500, origin: 'bottom' });
   ScrollReveal().reveal('.revealDiv', { delay: 500, origin: 'left'});
+  ScrollReveal().reveal('.certificate .card', { delay: 500, origin: 'bottom'});
   ScrollReveal().reveal('.project .btn-show', { delay: 500, origin: 'bottom'});
   ScrollReveal().reveal('.skills-desc', { delay: 500, origin: 'left' });
   ScrollReveal().reveal('.skills-Info', { delay: 500, origin: 'bottom' });
