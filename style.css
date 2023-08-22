@@ -89,7 +89,7 @@ section .title{
 }
 .navbar .logo a{
     color: #fff;
-    font-size: 35px;
+    font-size: 29px;
     font-weight: 600;
 }
 /* .navbar .logo a span{
@@ -145,7 +145,7 @@ section .title{
     color: #fff;
     z-index: 9999;
     font-size: 30px;
-    border-radius: 6px;
+    border-radius: 10px;
     border-bottom-width: 2px;
     cursor: pointer;
     opacity: 0;
@@ -160,19 +160,6 @@ section .title{
 .scroll-up-btn:hover{
     filter: brightness(90%);
 }
-
-.scroll-line{
-    background: linear-gradient(217deg, rgb(13, 255, 0), rgba(255,0,0,0) 70.71%),
-            linear-gradient(127deg, rgba(194, 200, 193, 0.915), rgba(0,255,0,0) 70.71%),
-            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
-      bottom: 0;
-      left: 0;
-      height: 4px;
-      position: fixed;
-      transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-      z-index: 9999;
-    }
-
 
 /* home section styling */
 .home{
@@ -196,22 +183,11 @@ section .title{
 .home .home-content .text-1{
     font-size: 40px;
     text-shadow: 3px 3px 3px #000;
+    /* margin-bottom: 20px; */
 }
-.home .home-content .text-2{
-    font-size: 75px;
-    font-weight: 600;
-    margin-left: -3px;
-    text-shadow: 3px 3px 3px #000;
-}
-.home .home-content .text-3{
-    font-size: 40px;
-    margin: 5px 0;
-    text-shadow: 3px 3px 3px #000;
-}
-.home .home-content .text-3 span{
-    color: crimson;
-    font-weight: 500;
-    text-shadow: 3px 3px 3px #000;
+.home .home-content .revealDiv{
+    margin-bottom: 30px;
+    margin-top: 90px;
 }
 :root{
   --button-color: #fff;
@@ -221,7 +197,35 @@ section .title{
   --button-line-height: 64px;
   --button-width: 210px;
 }
-
+  .home .home-content .button-1{
+    display: inline-block;
+    color: #fff;
+    background: maroon;
+    font-size: 1.2rem;
+    height: var(--button-height);
+    line-height: var(--button-line-height);
+    width: 140px;
+    font-weight: 600px;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    border: 3px solid #112526;
+    background-image: -webkit-linear-gradient(30deg, #112526 50%, transparent 50%);
+    background-image: linear-gradient(30deg, #112526 50%, transparent 50%);
+    background-size: 610px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+    margin-right: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .home .home-content .button-1:hover{
+    background-position: 100%;
+    color: #fff;
+    border: 3px solid maroon;
+  }
  .hover-button{
     line-height: var(--button-line-height);
     height: var(--button-height);
@@ -280,7 +284,132 @@ section .title{
     transform: rotateX(90deg) rotateY(180deg) rotateZ(180deg) translateY(64px);
     opacity: 1;
   }
-  
+  .home .button-con{
+    display: flex;
+    margin-bottom: 60px;
+  }
+
+
+  .home .social-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    width: 400px;
+    padding: 10px 0;
+    /* border-radius: 50px;
+    background-color: crimson; */
+}
+.home .social-links a{
+    color: #fff;
+}
+.facebook-holder{
+    position: relative;
+    background: #3B5999;
+    border-radius: 50%;
+}
+.instagram-holder{
+    position: relative;
+    background: #e1306c;
+    border-radius: 50%;
+}
+.github-holder{
+    position: relative;
+    background: #333;
+    border-radius: 50%;
+}
+.github-holder{
+    position: relative;
+    background: #333;
+    border-radius: 50%;
+}
+.linkedin-holder{
+    position: relative;
+    background: blue;
+    border-radius: 50%;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    width: 2em;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    
+    transition: all 0.5s ease;
+}
+
+.tooltip{
+    position: absolute;
+    padding: 5px 20px;
+    top: 0%;
+    left: 0%;
+    transform: translate(-25%, -35px);
+    font-size: 1em;
+    border-radius: 50px;
+    color: #FFF;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 0;
+}
+
+.tooltip::before{
+    content: "";
+    display: flex;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    transform: translate(2rem, 15px) rotate(45deg);
+    z-index: -2;
+    outline: none;
+    border: none;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+.linkedin .tooltip::before{
+    transform: translate(1.7rem, 15px) rotate(45deg);
+}
+
+.github .tooltip::before{
+    transform: translate( 1.6rem, 15px) rotate(45deg);
+}
+
+.icon:hover ~ .tooltip{
+    transform: translate(-25%, -60px) ;
+    opacity: 1;
+}
+
+.icon:hover{
+    color: #FFF;
+}
+
+.facebook .icon:hover,
+.facebook .icon:hover ~ .tooltip,
+.facebook .icon:hover ~ .tooltip::before{
+    background: #3B5999;
+}
+
+.instagram .icon:hover,
+.instagram .icon:hover ~ .tooltip,
+.instagram .icon:hover ~ .tooltip::before{
+    background: #e1306c;
+}
+
+.github .icon:hover ~ .tooltip,
+.github .icon:hover ~ .tooltip::before,
+.github .icon:hover{
+    background: #333;
+}
+
+.linkedin .icon:hover,
+.linkedin .icon:hover ~ .tooltip,
+.linkedin .icon:hover ~ .tooltip::before{
+    background: blue;
+}
 /* about section styling */
 
 .about .about-content .left{
@@ -486,11 +615,7 @@ section .title{
     /* height: 95px; */
    
 }
-.skills .skills-content .left p{
-    text-align: justify;
-    margin-top: 20px;
-    font-size: 18px;
-}
+
 
 /* progress bar */
 .progress-bar {
@@ -852,8 +977,16 @@ footer span a:hover{
     text-decoration: underline;
 }
 
-
-
+/* scroll progress */
+.scroll-line{
+    background: gold;
+      top: 0;
+      left: 0;
+      height: 4px;
+      position: fixed;
+      transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      z-index: 9999;
+    }
 
 /* responsive media query start */
 @media (max-width: 1104px) {
@@ -919,13 +1052,6 @@ footer span a:hover{
         margin: 20px 0;
         font-size: 25px;
     }
-    .home .home-content .text-2{
-        font-size: 70px;
-    }
-    .home .home-content .text-3{
-        font-size: 35px;
-    }
-    
     .max-width{
         max-width: 930px;
     }
@@ -943,7 +1069,7 @@ footer span a:hover{
 
     .skills .skills-content .column{
         width: 100%;
-        margin-bottom: 35px;
+        margin-bottom: 5px;
     }
     .contact .contact-content .column{
         width: 100%;
@@ -973,12 +1099,6 @@ footer span a:hover{
     .max-width{
         padding: 0 23px;
     }
-    .home .home-content .text-2{
-        font-size: 60px;
-    }
-    .home .home-content .text-3{
-        font-size: 32px;
-    }
     .project .desc{
         font-size: 20px;
     }.about .about-content .rightSide a{
@@ -991,16 +1111,33 @@ footer span a:hover{
     
     .project .pro-container .card,.certificate .cerContainer .card{
         width: 100%;
+    }.home .home-content{
+        width: 100%;
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+    }.home .home-content .text-1{
+        text-align: center;
+    }.home .button-con{
+        margin: 5px auto;
+
+    }.home .home-content .revealDiv{
+        height: 110px;
+        margin-bottom: 10px;
+    }.navbar .logo a{
+        font-size: 24px;
+    }.home .social-links{
+        margin: 60px auto;
+        width: 100%;
+        padding: 0px 50px;
+    }.home .home-content .revealDiv{
+        margin-top: 180px;
     }
 }
 
 @media (max-width: 500px) {
-    .home .home-content .text-2{
-        font-size: 50px;
-    }
-    .home .home-content .text-3{
-        font-size: 27px;
-    }.hover-button{
+   .hover-button{
         font-size: 1rem;
         width: 169px;
         height: 60px;
@@ -1070,11 +1207,7 @@ footer span a:hover{
     .contact .title{
         font-size: 28px
     }.home .home-content .text-1{
-        font-size: 27px;
-    }.home .home-content .text-2{
-        font-size: 41px;
-    }.home .home-content .text-3{
-        font-size: 27px;
+        font-size: 35px;
     }
     .project .pro-container .card .box{
         height: 200px;
@@ -1111,5 +1244,18 @@ footer span a:hover{
         bottom: 60px !important;
     }.contact .contact-content .info .sub-title{
         font-size: 14px;
+    }.home .button-con{
+        display: flex;
+        flex-direction: column;
+    } .home .home-content .button-1{
+        font-size: 14px;
+        width: 159px;
+        margin-bottom: 30px;
+    }.home .social-links{
+       padding: 0 10px;
+    }.home .home-content .revealDiv{
+        height: 110px;
+        margin-bottom: 30px;
+        margin-top: 70px;
     }
 }

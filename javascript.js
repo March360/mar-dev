@@ -140,6 +140,13 @@ $(document).ready(function(){
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
+    // typing text animation script
+    var typed = new Typed(".typing", {
+      strings: ["Hello, I'm March Meguillo", "And I'm a Web Developer","Let's Build a Beautiful Things"],
+      typeSpeed: 100,
+      backSpeed: 60,
+      loop: true
+  });
    
 });
 
