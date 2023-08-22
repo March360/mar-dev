@@ -286,7 +286,7 @@ section .title{
   }
   .home .button-con{
     display: flex;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
 
@@ -371,15 +371,21 @@ section .title{
 
 
 .linkedin .tooltip::before{
-    transform: translate(1.7rem, 15px) rotate(45deg);
+    transform: translate(1.2rem, 15px) rotate(45deg);
+}
+.facebook .tooltip::before{
+    transform: translate(1.5rem, 15px) rotate(45deg);
+}
+.instagram .tooltip::before{
+    transform: translate(1.5rem, 15px) rotate(45deg);
 }
 
 .github .tooltip::before{
-    transform: translate( 1.6rem, 15px) rotate(45deg);
+    transform: translate( 1.2rem, 15px) rotate(45deg);
 }
 
 .icon:hover ~ .tooltip{
-    transform: translate(-25%, -60px) ;
+    transform: translate(-25%, -45px) ;
     opacity: 1;
 }
 
