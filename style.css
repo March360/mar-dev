@@ -189,6 +189,7 @@ section .title{
     margin-bottom: 30px;
     margin-top: 150px;
 }
+
 :root{
   --button-color: #fff;
   --text-color: maroon;
@@ -196,99 +197,125 @@ section .title{
   --button-height: 64px;
   --button-line-height: 64px;
   --button-width: 210px;
+  /* Button 1 */
+  --b1-buttonColor: #fff;
+  --b1-bg:  #112526;
+  --b1-Height: 64px;
+  --b1-lineHeight: 64px;
+  /* Button 2 */
+  --buttonWidth: 140px;
+  --border-radius: 5px;
+  --color: #bf7b7b;
+  --btn-hover-color: maroon;
+  --button-bg: #fff;
+  --b2-lineHeight: 64px;
+  --b2-borderColor: #fff;
 }
-  .home .home-content .button-1{
-    display: inline-block;
-    color: #fff;
-    background: maroon;
-    font-size: 1.2rem;
-    height: var(--button-height);
-    line-height: var(--button-line-height);
-    width: 140px;
-    font-weight: 600px;
-    overflow: hidden;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-    border: 3px solid #112526;
-    background-image: -webkit-linear-gradient(30deg, #112526 50%, transparent 50%);
-    background-image: linear-gradient(30deg, #112526 50%, transparent 50%);
-    background-size: 610px;
-    background-repeat: no-repeat;
-    background-position: 0%;
-    -webkit-transition: background 300ms ease-in-out;
-    transition: background 300ms ease-in-out;
-    margin-right: 14px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .home .home-content .button-1:hover{
-    background-position: 100%;
-    color: #fff;
-    border: 3px solid maroon;
-  }
- .hover-button{
-    line-height: var(--button-line-height);
-    height: var(--button-height);
-    width: var(--button-width);
-  
-    /* position relative to absolute position the pseudo element */
-    position: relative;
-    /* transition to smoothen the change in properties */
-    transition: all 0.5s ease-out;
-    /* transform style to allow for the rotation to properly occur */
-    transform-style: preserve-3d;
-    /* styling properties */
-    outline: none;
-    background-color: var(--button-color);
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    color: var(--text-color);
-    cursor: pointer;  
- }
- .hover-button:hover {
-    transform: translateY(calc(var(--button-height)/-2)) rotateX(90deg);
-  }
-  .hover-button:before {
-    content: 'Download Resume';
-    /* position the pseudo element to stretch the entirety of the connected element */
-    position: absolute;
-    /* include a minor "padding" as to compensate for the border of 3px in the connected element */
-    bottom: -3px;
-    left: -3px;
-    right: -3px;
-    top: -3px;
-    /* transform the pseudo element relative to an origin point located in the bottom center of the element  */
-    transform-origin: bottom center;
-    /* rotate the element out of view, 
-    changing also the rotation of the other axes to make the nested content legible (and not mirrored),
-    changing also the vertical coordinate as to move the pseudo element below the element by an amount matching the height of the element itself */
-    transform: rotateX(90deg) rotateY(180deg) rotateZ(180deg) translateY(var(--button-height));
-    /* set the element to be initially hidden */
-    opacity: 0;
-    /* include a transition to smoothen the change in properties */
-    transition: all 0.5s ease-out;
-  
-    /* styling properties */
-    background-color: maroon;
-    color: #fff;
-    border-radius: 0.5rem;
-    border: none;
-    width: 214px;
-    height: var(--button-height);
-    line-height: var(--button-line-height);
-  }
-  .hover-button:hover:before {
-    transform: rotateX(90deg) rotateY(180deg) rotateZ(180deg) translateY(64px);
-    opacity: 1;
-  }
+ 
   .home .button-con{
     display: flex;
     margin-bottom: 40px;
   }
 
+  .click-btn {
+    display: flex;
+    width: var(--buttonWidth);
+    height: 64px;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0.5rem; */
+    line-height: var(--b2-lineHeight);
+    /* border: 1px solid; */
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.35s;
+    box-sizing: border-box;
+    /* background: var(--button-bg); */
+  }
+  /* Button 1 */
+  .btn-1 {
+    position: relative;
+    border-color: green;
+    background: var(--b1-bg);
+    color: var(--b1-buttonColor);
+    transition-delay: 0.3s;
+    overflow: hidden;
+    margin-right: 20px;
+    &:hover {
+      transform: translateY(-0.3em);
+      border-color: var(--btn-hover-color);
+      background: var(--btn-hover-color);
+      color: rgba(221, 99, 149, 0);
+      transition-delay: 0s;
+      &::before {
+        opacity: 1;
+        transform: translateX(0);
+        transition-delay: 0.15s;
+      }
+    }
+    &::before {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      content: attr(data-hover);
+      color: var(--button-color);
+      text-align: center;
+      transform: translateX(-60%);
+      transition: all 0.4s;
+      z-index: 1;
+    }
+  }
+  
+/* Button 2 */
+  .btn-2 {
+    color: var(--color);
+    position: relative;
+    background: var(--button-bg);
+    border-color: var(--b2-borderColor);
+    color: var(--text-color);
+    overflow: hidden;
+    &::before {
+      width: 0;
+      height: 4.5px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: var(--btn-hover-color);
+      transition: all 0.35s;
+      content: "";
+      z-index: 2;
+    }
+    &::after {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #fff;
+      border: 1px solid var(--btn-hover-color);
+      border-radius: var(--btn-hover-color);
+      background-color: var(--btn-hover-color);
+      transform: translate(0, -100%);
+      transition: all 0.35s;
+      content: attr(data-hover);
+      z-index: 1;
+    }
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+      &::after {
+        transform: translate(0, 0);
+      }
+    }
+  }
 
   .home .social-links{
     display: flex;
@@ -470,6 +497,7 @@ section .title{
 .project{
     color:#fff;
     background: #111;
+    position: relative;
 }
 .project .title::before,
 .teams .title::before{
@@ -489,9 +517,10 @@ section .title{
     cursor: pointer;
     transition: all 0.3s ease;
     margin-bottom: 32px;
-    border: 2px solid #222;
+    border: 2px solid none;
     /* height: 400px; */
     overflow: hidden;
+   border: 2px solid #111;
 }
 .project .pro-container .card .box{
     overflow: hidden;
@@ -517,12 +546,13 @@ section .title{
 }
 
 .project .desc{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
     background-color: #0b4f53;
-    height: 60px;
-    line-height: 60px;
+    height: 45px;
+    line-height: 45px;
     text-align: center;
+    margin: 0;
 }
 
 .project .btn-show{
@@ -553,6 +583,22 @@ section .title{
  }
  .card-div{
     display: none;
+ }
+ .project .demoSource{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 45px;
+    font-size: 15px;
+ }
+ .project .demo,.project .scode{
+    border: 2px solid gray;
+    padding: 2px 10px;
+    margin: 50px 0;
+    color: #fff;
+ }
+ .project .demo:hover,.project .scode:hover{
+    border: 2px solid blue;
  }
  /* Certificate Section Start */
 .certificate{
@@ -1006,12 +1052,6 @@ footer span a:hover{
 @media (max-width: 1024px){
     .project .desc{
         font-size: 17px;
-    }.hover-button:before{
-        padding: 0 5px;
-        width: 210px;
-        font-size: 1.2rem
-    }.hover-button{
-        width: 214px;
     }.about .about-content .rightSide a{
         padding: 12px 23px;
         font-size: 18px;
@@ -1143,17 +1183,6 @@ footer span a:hover{
 }
 
 @media (max-width: 500px) {
-   .hover-button{
-        font-size: 1rem;
-        width: 169px;
-        height: 60px;
-        line-height: 60px;
-    }.hover-button:before{
-        width: 167px;
-        height: 60px;
-        line-height: 60px;
-        font-size: 1rem;
-    }
     .about .about-content .rightSide .text,
     .skills .skills-content .left .text{
         font-size: 19px;
@@ -1227,17 +1256,8 @@ footer span a:hover{
     }.about .about-content .rightSide a{
         font-size: 15px;
         padding: 10px 15px;
-    }.hover-button{
-        font-size: 14px;
-        width: 160px;
-        height: 60px;
-        line-height: 60px;
-    }.hover-button:before{
-        width: 156px;
-        height: 60px;
-        line-height: 60px;
-        font-size: 14px;
-    }.services .services-content .card{
+    }
+    .services .services-content .card{
         height: auto;
     }
     .services .services-content .text,
@@ -1253,15 +1273,23 @@ footer span a:hover{
     }.home .button-con{
         display: flex;
         flex-direction: column;
-    } .home .home-content .button-1{
-        font-size: 14px;
-        width: 159px;
-        margin-bottom: 30px;
-    }.home .social-links{
+        justify-content: center;
+        align-items: center;
+    } .home .social-links{
        padding: 0 10px;
     }.home .home-content .revealDiv{
         height: 110px;
         margin-bottom: 30px;
         margin-top: 70px;
+    }.btn-1{
+        margin-bottom: 20px;
+        margin-right: 0;
+    }.click-btn{
+        width: 120px;
+        height: 55px;
+        line-height: 55px;
+        font-size: 18px;
+    }.home .home-content .revealDiv{
+        margin-top: 90px;
     }
 }
