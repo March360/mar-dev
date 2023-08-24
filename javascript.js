@@ -217,6 +217,13 @@ ScrollReveal({
         }
       });
 
+      setTimeout(function(){
+        $('#preloader').fadeToggle();
+      },2200);
+      setTimeout(function(){
+        $('.pl,.preloadingName').fadeToggle();
+      },1800);
+      
       // let galleryBtn = document.querySelector('#gallery-btn');
       // let currentItem = 3;
 
