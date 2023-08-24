@@ -219,10 +219,10 @@ ScrollReveal({
 
       setTimeout(function(){
         $('#preloader').fadeToggle();
-      }, 1500);
+      }, 2000);
       setTimeout(function(){
         $('.pl,.preloadingName').fadeToggle();
-      }, 1800);
+      }, 1500);
       
       // let galleryBtn = document.querySelector('#gallery-btn');
       // let currentItem = 3;
