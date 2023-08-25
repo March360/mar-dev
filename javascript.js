@@ -142,7 +142,7 @@ $(document).ready(function(){
     });
     // typing text animation script
     var typed = new Typed(".typing", {
-      strings: ["Hello, I'm March Meguillo", "I'm a Web Developer","Let's Build a Beautiful Things"],
+      strings: ["Hi! I'm March Meguillo,", "I'm a Web Developer","Let's Build Beautiful Things."],
       typeSpeed: 100,
       backSpeed: 60,
       loop: true
@@ -212,7 +212,7 @@ ScrollReveal({
         //show the next three images
         $($hidden).slice(0, 3).fadeIn(800);;
          // If the length of $hidden is 4 then hide the button
-        if ($hidden.length == 3){
+        if ($hidden.length == 1){
           $(this).fadeOut();
         }
       });

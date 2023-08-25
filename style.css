@@ -181,7 +181,7 @@ section .title{
   margin-right: 0;
 }
 .home .home-content .text-1{
-    font-size: 40px;
+    font-size: 45px;
     text-shadow: 3px 3px 3px #000;
     /* margin-bottom: 20px; */
 }
@@ -361,7 +361,7 @@ section .title{
     background: blue;
     border-radius: 50%;
 }
-.icon{
+.social-links .icon{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -370,7 +370,6 @@ section .title{
     padding: 10px;
     border-radius: 50%;
     font-size: 1.5em;
-    
     transition: all 0.5s ease;
 }
 
@@ -416,36 +415,36 @@ section .title{
     transform: translate( 1.2rem, 15px) rotate(45deg);
 }
 
-.icon:hover ~ .tooltip{
+.social-links .icon:hover ~ .tooltip{
     transform: translate(-25%, -45px) ;
     opacity: 1;
 }
 
-.icon:hover{
+.social-links .icon:hover{
     color: #FFF;
 }
 
-.facebook .icon:hover,
-.facebook .icon:hover ~ .tooltip,
-.facebook .icon:hover ~ .tooltip::before{
+.facebook .social-links .icon:hover,
+.facebook .social-links .icon:hover ~ .tooltip,
+.facebook .social-links .icon:hover ~ .tooltip::before{
     background: #3B5999;
 }
 
-.instagram .icon:hover,
-.instagram .icon:hover ~ .tooltip,
-.instagram .icon:hover ~ .tooltip::before{
+.instagram .social-links .icon:hover,
+.instagram .social-links .icon:hover ~ .tooltip,
+.instagram .social-links .icon:hover ~ .tooltip::before{
     background: #e1306c;
 }
 
-.github .icon:hover ~ .tooltip,
-.github .icon:hover ~ .tooltip::before,
-.github .icon:hover{
+.github .social-links .icon:hover ~ .tooltip,
+.github .social-links .icon:hover ~ .tooltip::before,
+.github .social-links .icon:hover{
     background: #333;
 }
 
-.linkedin .icon:hover,
-.linkedin .icon:hover ~ .tooltip,
-.linkedin .icon:hover ~ .tooltip::before{
+.linkedin .social-links .icon:hover,
+.linkedin .social-links .icon:hover ~ .tooltip,
+.linkedin .social-links .icon:hover ~ .tooltip::before{
     background: blue;
 }
 /* about section styling */
@@ -856,8 +855,8 @@ section .title{
   
 /* contact section styling */
 .contact{
-    background-color: #000;
-    color: #fff;
+    background-color: #111;
+    color: rgba(255, 255, 255, 0.84);
 }
 .contact .contact-content .column{
     width: calc(50% - 30px);
@@ -889,7 +888,7 @@ section .title{
     font-weight: 500;
 }
 .contact .contact-content .info .sub-title{
-    color: #fff;
+    color: rgba(255, 255, 255, 0.84);
 }
 .contact .rightSide form .fields{
     display: flex;
@@ -976,7 +975,7 @@ section .title{
     font-size: 19px;
     transition: .4s;
     border-radius: 4px;
-    background-color: #000;
+    background-color: #111;
   }
 
   .inputContact:focus{
@@ -999,7 +998,7 @@ section .title{
   .inputContact:focus ~ label,
   .inputContact:valid ~ label{
     transform: translateY(-33px);
-    background: #000;
+    background: #111;
     font-size: 16px;
     color: gold;
     font-weight: 500;
@@ -1007,7 +1006,7 @@ section .title{
    
   }
   .textArea{
-    background-color: #000;
+    background-color: #111;
     color: #fff;
   }
   .inputContact{
@@ -1016,7 +1015,7 @@ section .title{
   .textArea:focus{
     outline: none !important;
     box-shadow: 0 0 10px rgb(245, 218, 12);
-    background-color: #000;
+    background-color: #111;
 
 
   }
@@ -1520,7 +1519,14 @@ footer span a:hover{
         padding: 12px 25px !important;
         font-size: 18px;
         color: #fff;
-    }.project .pro-container .card .box{
+        margin-top: 40px;
+    }.about .about-content .rightSide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+     }
+    .project .pro-container .card .box{
         height: 330px;
     }
     
@@ -1533,6 +1539,7 @@ footer span a:hover{
         flex-direction: column;
         justify-content: center;
     }.home .home-content .text-1{
+        font-size: 40px;
         text-align: center;
     }.home .button-con{
         margin: 5px auto;
@@ -1577,7 +1584,8 @@ footer span a:hover{
         line-height: 38px;
     }.about .about-image{
         max-width: 100%;
-    }.services .services-content .card{
+    }
+    .services .services-content .card{
         width: 100%;
     }
     .project .desc{
@@ -1601,6 +1609,8 @@ footer span a:hover{
         padding: 12px 15px !important;
         font-size: 18px;
         color: #fff;
+    }.home .home-content .revealDiv{
+        margin-bottom: 47px;
     }
 }
 @media(max-width: 280px){
@@ -1610,14 +1620,17 @@ footer span a:hover{
     }
     
     .navbar .logo a{
-        font-size: 28px;
+        font-size: 24px;
     }
     .project .title,.about .title,
+    .certificate .title,
     .skills .title,.services .title,
     .contact .title{
-        font-size: 28px
+        font-size: 24px
     }.home .home-content .text-1{
         font-size: 35px;
+    }.social-links .icon{
+        font-size: 1.2em;
     }
     .project .pro-container .card .box{
         height: 200px;
@@ -1642,10 +1655,13 @@ footer span a:hover{
     .services .services-content .card p{
         font-size: 17px;
     }.scroll-up-btn{
-        bottom: 60px !important;
+        bottom: 35px;
     }.contact .contact-content .info .sub-title{
         font-size: 14px;
-    }.home .button-con{
+    }.contact .contact-content .text{
+        font-size: 18px;
+    }
+    .home .button-con{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1670,5 +1686,7 @@ footer span a:hover{
         font-size: 5px;
     }.preloadingName{
         font-size: 18px;
+    }footer{
+        font-size: 12px;
     }
 }
