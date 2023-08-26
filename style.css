@@ -1752,6 +1752,18 @@ footer span a:hover{
         margin-top: 80px;
     }.caption-container{
         font-size: 15px;
+    }.demo-2 {
+        opacity: 0.6;
+        border: 3px solid rgba(0, 0, 0,45);
+    }
+      
+      .active-2{
+        opacity: 1;
+        border: 3px solid gold;
+    }
+      .demo-2:hover {
+        opacity: 1;
+        border: 3px solid #fff;
     }
 }
 
