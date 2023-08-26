@@ -1743,12 +1743,14 @@ footer span a:hover{
     }.contact .rightSide form .button-area{
         justify-content: center;
     }.modal-content {
-        width: 90%;
+        width: 100%;
     }.close{
         justify-content: center;
         width: 90%;
         /* background: crimson; */
         margin-top: 80px;
+    }.caption-container{
+        font-size: 15px;
     }
 }
 
