@@ -1747,6 +1747,7 @@ footer span a:hover{
     }.close{
         justify-content: center;
         width: 90%;
+      padding-right: 0;
         /* background: crimson; */
         margin-top: 80px;
     }.caption-container{
