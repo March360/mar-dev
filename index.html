@@ -108,7 +108,7 @@
             <div class="home-content">
                 
                 <div class="revealDiv">
-                  <div class="text-1 "><span class="typing"></span></div>
+                  <div class="text-1"><span class="typing"></span></div>
                 </div>
                 <div class="button-con">
                     <div><a href="#contact" class="click-btn btn-1" href="#" data-hover="Message me!">Hire me!</a></div>
@@ -182,7 +182,7 @@
             <div class="pro-container">
                 <div class="card card-div card-reveal-1">
                    <div class="box">
-                        <img class="pro-image" src="images/landing page.PNG" alt="landing-page">
+                        <img class="pro-image hover-shadow cursor" src="images/landing page.PNG" alt="landing-page" onclick="openModal();currentSlide(1)">
                     </div>
                     <div class="desc">Landing Page</div>
                     <div class="demoSource">
@@ -196,7 +196,7 @@
                 </div>
                 <div class="card card-div card-reveal-1">
                     <div class="box">
-                         <img class="pro-image" src="images/Portfolio-pic.PNG" alt="Portfolio-image">
+                         <img class="pro-image hover-shadow cursor" src="images/pic-2.PNG" alt="Portfolio-image" onclick="openModal();currentSlide(2)">
                      </div>
                      <div class="desc">Portfolio</div>
                      <div class="demoSource">
@@ -210,7 +210,7 @@
                  </div>
                 <div class="card card-div card-reveal-1">
                     <div class="box">
-                        <img class="pro-image" src="images/mp3PlayerPic.PNG" alt="Music Player">
+                        <img class="pro-image hover-shadow cursor" src="images/mp3PlayerPic.PNG" alt="Music Player" onclick="openModal();currentSlide(3)">
                     </div>
                     <div class="desc">MP3 Player</div>
                     <div class="demoSource">
@@ -224,7 +224,7 @@
                 </div>
                 <div class="card card-div card-reveal">
                     <div class="box">
-                        <img class="pro-image" src="images/Calculator.PNG" alt="Calculator">
+                        <img class="pro-image hover-shadow cursor" src="images/Calculator.PNG" alt="Calculator" onclick="openModal();currentSlide(4)">
                     </div>
                     <div class="desc">Calculator</div>
                     <div class="demoSource">
@@ -238,7 +238,7 @@
                 </div> 
                 <div class="card card-div card-reveal">
                     <div class="box">
-                        <img class="pro-image" src="images/technical-python-documentation.PNG" alt="Python-documentation">
+                        <img class="pro-image hover-shadow cursor" src="images/technical-python-documentation.PNG" alt="Python-documentation" onclick="openModal();currentSlide(5)">
                     </div>
                     <div class="desc">Python Documentation</div>
                     <div class="demoSource">
@@ -252,7 +252,7 @@
                 </div>
                 <div class="card card-div card-reveal">
                     <div class="box">
-                     <img class="pro-image" src="images/tribute-pic.PNG" alt="Tribute">
+                     <img class="pro-image hover-shadow cursor" src="images/tribute-pic.PNG" alt="Tribute" onclick="openModal();currentSlide(6)">
                     </div>
                     <div class="desc">Tribute Page</div>
                     <div class="demoSource">
@@ -266,7 +266,7 @@
                 </div>   
                 <div class="card card-div card-reveal">
                     <div class="box">
-                        <img class="pro-image" src="images/survey.PNG" alt="Survey Form">
+                        <img class="pro-image hover-shadow cursor" src="images/survey.PNG" alt="Survey Form" onclick="openModal();currentSlide(7)">
                     </div>
                     <div class="desc">Survey Form</div>
                     <div class="demoSource">
@@ -279,9 +279,85 @@
                     </div>
                 </div>      
                </div>
-               <button class="btn-show" id="gallery-btn">See more...</button>
+               <button class="btn-show" id="gallery-btn">Load More</button>
             </div>
         </div>
+        <!-- Modal area -->
+        <div id="myModal" class="modal">
+            <div class="ligh-box">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+          
+                    <div class="mySlides">
+                      <div class="numbertext">1 / 7</div>
+                     <div class="con">
+                      <img src="images/pic-1.PNG" style="width:100%;">
+                    </div>
+                     </div>
+                
+                    <div class="mySlides">
+                      <div class="numbertext">2 / 7</div>
+                      <img src="images/pic-2.PNG" style="width:100%;">
+                    </div>
+                
+                    <div class="mySlides">
+                      <div class="numbertext">3 / 7</div>
+                      <img src="images/pic-3.PNG" style="width:100%;">
+                    </div>
+                    
+                    <div class="mySlides">
+                      <div class="numbertext">4 / 7</div>
+                      <img src="images/pic-4.PNG" style="width:100%;">
+                    </div>
+                    <div class="mySlides">
+                      <div class="numbertext">5 / 7</div>
+                      <img src="images/pic-5.PNG" style="width:100%;">
+                    </div>
+                    <div class="mySlides">
+                      <div class="numbertext">6 / 7</div>
+                      <img src="images/pic-6.PNG" style="width:100%;">
+                    </div>
+                    <div class="mySlides">
+                      <div class="numbertext">7 / 7</div>
+                      <img src="images/pic-7.PNG" style="width:100%;">
+                    </div>
+                    <div class="preNext">
+                      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <div class="caption-container">
+                      <p id="caption"></p>
+                    </div>
+                    <div class="imageCon">
+                      <div class="column-2">
+                          <img class="demo-2 cursor" src="images/pic-1.PNG" style="width:100%" onclick="currentSlide(1)" alt="Landing Page use: HTML5,CSS,JS">
+                        </div>
+                        <div class="column-2">
+                          <img class="demo-2 cursor" src="images/pic-2.PNG" style="width:100%" onclick="currentSlide(2)" alt="Portfolio use: HTML5,CSS,JS,JQuery">
+                        </div>
+                        <div class="column-2">
+                          <img class="demo-2 cursor" src="images/pic-3.PNG" style="width:100%" onclick="currentSlide(3)" alt="MP3 Player use: HTML5,CSS,JS,jQuery">
+                        </div>
+                        <div class="column-2">
+                          <img class="demo-2 cursor" src="images/pic-4.PNG" style="width:100%" onclick="currentSlide(4)" alt="Calculator use: HTML5,CSS,JS,jquery">
+                        </div>
+                        <div class="column-2">
+                          <img class="demo-2 cursor" src="images/pic-5.PNG" style="width:100%" onclick="currentSlide(5)" alt="Python Documentation use: HTML5,CSS,JS">
+                        </div>
+                        <div class="column-2">
+                          <img class="demo-2 cursor" src="images/pic-6.PNG" style="width:100%" onclick="currentSlide(6)" alt="Tribute Page use: HTML5,CSS,JS">
+                        </div>
+                        <div class="column-2">
+                          <img class="demo-2 cursor" src="images/pic-7.PNG" style="width:100%" onclick="currentSlide(7)" alt="Survey Page use: HTML5,CSS,JS">
+                        </div>
+                          
+                    </div>
+                  </div>
+            </div>
+          </div>
+             
+             
+          
     </section>
     <!-- project section end -->
 
