@@ -156,40 +156,40 @@ ScrollReveal({
   delay: 400
   });
   
-  // ScrollReveal().reveal('.title', { delay: 500, origin: 'bottom'});
   ScrollReveal().reveal('.about .about-image', { delay: 500, origin: 'left' });
   ScrollReveal().reveal('.textdiv', { delay: 500, origin: 'bottom'});
   ScrollReveal().reveal('.services .column', { delay: 500, origin: 'bottom' });
-  // ScrollReveal().reveal('.card-reveal-1', { delay: 500, origin: 'bottom' });
-  // ScrollReveal().reveal('.revealDiv', { delay: 500, origin: 'left'});
   ScrollReveal().reveal('.certificate .card', { delay: 500, origin: 'bottom'});
-  // ScrollReveal().reveal('.project .btn-show', { delay: 500, origin: 'bottom'});
-  ScrollReveal().reveal('.skills-desc', { delay: 500, origin: 'left' });
-  ScrollReveal().reveal('.skills-Info', { delay: 500, origin: 'bottom' });
   ScrollReveal().reveal('.contact-desc', { delay: 500, origin: 'left' });
   ScrollReveal().reveal('.icons', { delay: 500, origin: 'bottom' });
   ScrollReveal().reveal('.message', { delay: 500, origin: 'bottom' });
-  ScrollReveal().reveal('.responsive', { delay: 500, origin: 'left' });
-  ScrollReveal().reveal('.webDesign', { delay: 500, origin: 'left' });
-
-  jQuery(document).ready(function(){
+  ScrollReveal().reveal('.webDesign', { delay: 500, origin: 'bottom' });
+  ScrollReveal().reveal('.responsive', { delay: 500, origin: 'bottom' });
   
+
+  const offsetTop = $('.skills-content').offset().top;
+  $(window).scroll(function(){
+   const screenPos = window.innerHeight / 5;
+  if($(window).scrollTop()+screenPos > offsetTop){
     jQuery('.progress-bar').each(function() {
       jQuery(this).find('.progress-content').animate({
         width:jQuery(this).attr('data-percentage')
-      },20000);
-      
+
+      },5000);
+
       jQuery(this).find('.progress-number-mark').animate(
         {left:jQuery(this).attr('data-percentage')},
-        {
-         duration: 20000,
+        { 
+         duration: 5000,
          step: function(now, fx) {
            var data = Math.round(now);
            jQuery(this).find('.percent').html(data + '%');
          }
       });  
     });
-  });
+  }
+});
+  
 
       function fillscrollline(){
         const windowHeight = window.innerHeight;

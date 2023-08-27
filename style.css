@@ -530,7 +530,7 @@ section .title{
 .project .pro-container .card .box{
     overflow: hidden;
     height: 350px;
-    padding: 15px;
+    /* padding: 15px; */
   
 }
 .project .pro-container .card .box img{
@@ -547,7 +547,7 @@ section .title{
 }
 
 .project .pro-container .card .box:hover img{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .project .desc{
@@ -662,6 +662,7 @@ section .title{
     padding: 0;
   }
 
+  
   /* The Close Button */
   .close {
     color: white;
@@ -669,16 +670,13 @@ section .title{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    top: 0;
-    padding-right: 10px;
+    top: -8px;
     z-index: 99999;
     font-size: 35px;
     font-weight: bold;
     background: none;
     width: 90%;
-    height: 50px;
-    margin: auto;
-    
+    height: 30px;
   }
   
   .close:hover,
@@ -929,12 +927,12 @@ section .title{
   }
 
   .progress-content-outter {
-    height: 7px;
+    height: 12px;
     background-color: silver;
   }
   
   .progress-content {
-    height: 7px;
+    height: 12px;
     background-color: #0b4f53;
     width: 0%; /* Initial value */
   }
@@ -980,20 +978,22 @@ section .title{
     justify-content: space-between;
     flex-direction: row;
     width: calc(50% - 20px);
-    background: #0b4f53;
+    background: rgba(0, 0, 0, 0.18);
     color: #fff;
     text-align: center;
     border-radius: 6px;
     padding: 35px 25px;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: 2px solid #fff;
   }
   .services .services-content .card:not(:last-child){
     margin-right: 30px;
   }
   .services .services-content .card:hover{
-    background: maroon;
-   
+   border: 2px solid gold;
+   background: rgba(0, 0, 0, 0);
+   color: gold;
   }
   .services .services-content .card .box{
     transition: all 0.3s ease;
@@ -1749,21 +1749,21 @@ footer span a:hover{
         width: 90%;
       padding-right: 0;
         /* background: crimson; */
-        margin-top: 80px;
+        margin-top: 40px;
     }.caption-container{
         font-size: 15px;
     }.demo-2 {
         opacity: 0.6;
-        border: 3px solid rgba(0, 0, 0,45);
+        border: 2px solid rgba(0, 0, 0,45);
     }
       
       .active-2{
         opacity: 1;
-        border: 3px solid gold;
+        border: 2px solid gold;
     }
       .demo-2:hover {
         opacity: 1;
-        border: 3px solid #fff;
+        border: 2px solid #fff;
     }
 }
 
@@ -1825,7 +1825,16 @@ footer span a:hover{
         color: #fff;
     }.home .home-content .revealDiv{
         margin-bottom: 47px;
-    }
+    }.click-btn{
+        width: 120px;
+        height: 55px;
+        line-height: 55px;
+        font-size: 18px;
+    }.home .social-links{
+        padding: 0 10px;
+     }.close{
+        margin-top: 80px;
+     }
 }
 @media(max-width: 280px){
     .navbar{
