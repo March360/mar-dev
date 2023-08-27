@@ -1834,7 +1834,9 @@ footer span a:hover{
         padding: 0 10px;
      }.close{
         margin-top: 80px;
-     }
+     }footer{
+        font-size: 14px;
+    }
 }
 @media(max-width: 280px){
     .navbar{
