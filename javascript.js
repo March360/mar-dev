@@ -123,6 +123,7 @@ $(document).ready(function(){
         }
     });
 
+
     // slide-up script
     $('.scroll-up-btn').click(function(){
         $('html').animate({scrollTop: 0});
@@ -261,3 +262,15 @@ ScrollReveal({
         dots[slideIndex-1].className += " active-2";
         captionText.innerHTML = dots[slideIndex-1].alt;
       }
+      function firstImage(image){
+        image.src = "images/2023-07-15-15-01-35-409.jpg"
+      }
+      function secondImage(image){
+        image.src = "images/Polish_20230202_132536567.jpg"
+      }
+  
+      var today = new Date();
+      var year = today.getFullYear();
+      var born = 1995;
+       age = year - born;
+      document.getElementById("Age").innerHTML = age;

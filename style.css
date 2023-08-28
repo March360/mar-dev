@@ -453,12 +453,15 @@ section .title{
 .about .about-content .left{
     width: 45%;
 }
+
 .about .about-content .left img{
     height: 400px;
     width: 400px;
     object-fit: cover;
     border-radius: 6px;
+    cursor: pointer;
 }
+
 .about .about-content .rightSide{
     width: 55%;
 }
@@ -497,7 +500,10 @@ section .title{
     color: #fff;
     border: 3px solid maroon;
 }
-
+.about #Age{
+   color: green;
+   font-weight: 800;
+}
 /* porfolio section styling */
 .project{
     color:#fff;
@@ -718,7 +724,7 @@ section .title{
     cursor: pointer;
     position: absolute;
     right: 0;
-    top: 44%;
+    top: 42%;
     width: auto;
     padding: 16px;
     margin-top: -50px;
@@ -986,14 +992,16 @@ section .title{
     cursor: pointer;
     transition: all 0.3s ease;
     border: 2px solid #fff;
+    font-weight: 600;
   }
   .services .services-content .card:not(:last-child){
     margin-right: 30px;
   }
   .services .services-content .card:hover{
    border: 2px solid gold;
-   background: rgba(0, 0, 0, 0);
-   color: gold;
+   background: rgba(0, 0, 0, 0.50);
+   box-shadow: 0 0 10px rgb(245, 218, 12);
+   /* color: gold; */
   }
   .services .services-content .card .box{
     transition: all 0.3s ease;
